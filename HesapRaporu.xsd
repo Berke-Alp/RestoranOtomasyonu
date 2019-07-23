@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="HesapRaporu" targetNamespace="http://tempuri.org/HesapRaporu.xsd" xmlns:mstns="http://tempuri.org/HesapRaporu.xsd" xmlns="http://tempuri.org/HesapRaporu.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="DatabaseConString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="DatabaseConString (Settings)" PropertyReference="ApplicationSettings.RestoranOtomasyonu.Properties.Settings.GlobalReference.Default.DatabaseConString" Provider="System.Data.OleDb" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTable1TableAdapter" GeneratorDataComponentClassName="DataTable1TableAdapter" Name="DataTable1" UserDataComponentName="DataTable1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DatabaseConString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        (Personel.Adi + ' ' + Personel.Soyadi) AS pas,OdemeTurleri.OdemeTuru, HesapHareketleri.AraToplam, HesapHareketleri.KdvTutari, HesapHareketleri.Indirim, HesapHareketleri.ToplamTutar, HesapHareketleri.Tarih
+FROM          HesapHareketleri,Personel,OdemeTurleri
+WHERE        HesapHareketleri.PersonelKodu=Personel.PersonelKodu AND HesapHareketleri.OdemeTuruKodu=OdemeTurleri.OdemeTuruKodu</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="AraToplam" DataSetColumn="AraToplam" />
+              <Mapping SourceColumn="KdvTutari" DataSetColumn="KdvTutari" />
+              <Mapping SourceColumn="Indirim" DataSetColumn="Indirim" />
+              <Mapping SourceColumn="ToplamTutar" DataSetColumn="ToplamTutar" />
+              <Mapping SourceColumn="Tarih" DataSetColumn="Tarih" />
+              <Mapping SourceColumn="OdemeTuru" DataSetColumn="OdemeTuru" />
+              <Mapping SourceColumn="pas" DataSetColumn="pas" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="HesapRaporu" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="HesapRaporu" msprop:Generator_UserDSName="HesapRaporu">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_RowClassName="DataTable1Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="AraToplam" msprop:Generator_ColumnVarNameInTable="columnAraToplam" msprop:Generator_ColumnPropNameInRow="AraToplam" msprop:Generator_ColumnPropNameInTable="AraToplamColumn" msprop:Generator_UserColumnName="AraToplam" type="xs:decimal" minOccurs="0" />
+              <xs:element name="KdvTutari" msprop:Generator_ColumnVarNameInTable="columnKdvTutari" msprop:Generator_ColumnPropNameInRow="KdvTutari" msprop:Generator_ColumnPropNameInTable="KdvTutariColumn" msprop:Generator_UserColumnName="KdvTutari" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Indirim" msprop:Generator_ColumnVarNameInTable="columnIndirim" msprop:Generator_ColumnPropNameInRow="Indirim" msprop:Generator_ColumnPropNameInTable="IndirimColumn" msprop:Generator_UserColumnName="Indirim" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ToplamTutar" msprop:Generator_ColumnVarNameInTable="columnToplamTutar" msprop:Generator_ColumnPropNameInRow="ToplamTutar" msprop:Generator_ColumnPropNameInTable="ToplamTutarColumn" msprop:Generator_UserColumnName="ToplamTutar" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Tarih" msprop:Generator_ColumnVarNameInTable="columnTarih" msprop:Generator_ColumnPropNameInRow="Tarih" msprop:Generator_ColumnPropNameInTable="TarihColumn" msprop:Generator_UserColumnName="Tarih" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="OdemeTuru" msprop:Generator_ColumnVarNameInTable="columnOdemeTuru" msprop:Generator_ColumnPropNameInRow="OdemeTuru" msprop:Generator_ColumnPropNameInTable="OdemeTuruColumn" msprop:Generator_UserColumnName="OdemeTuru" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="pas" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnpas" msprop:Generator_ColumnPropNameInRow="pas" msprop:Generator_ColumnPropNameInTable="pasColumn" msprop:Generator_UserColumnName="pas" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
